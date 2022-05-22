@@ -40,11 +40,10 @@ const UsersForm = ({ getUser, userSelected, deselectUser }) => {
       birthday
     };
     if (userSelected !== null) {
-      // Si hay algo en movieSelected, hay que editar
-      alert("Editando");
+ ;
       axios
         .put(
-          `https://users-crud1.herokuapp.com/users/${userSelected.id}/`,user
+          `https://users-crud1.herokuapp.com/users/${userSelected.id}/`, user
           
         
         )
@@ -90,6 +89,8 @@ const UsersForm = ({ getUser, userSelected, deselectUser }) => {
         </div>
       </div>
 
+      <div className="d-flex"> </div>
+
       <div class="mb-3">
         <label htmlFor="firstname" class="form-label">
           First Name
@@ -133,7 +134,7 @@ const UsersForm = ({ getUser, userSelected, deselectUser }) => {
         />
       </div>
 
-      <button type="submit" class="btn btn-primary">
+      <button  class="btn btn-primary">
         Submit
       </button>
     </form>
